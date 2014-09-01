@@ -19,8 +19,8 @@
 
 			@include media-query($alias) {
 
-				[class~="#{$plump-namespace}#{$alias}-f\>"]     { float: left !important; }
-				[class~="#{$plump-namespace}#{$alias}-f\<"]     { float: right !important; }
+				[class~="#{$plump-namespace}#{$alias}-f\<"]     { float: left !important; }
+				[class~="#{$plump-namespace}#{$alias}-f\>"]     { float: right !important; }
 				[class~="#{$plump-namespace}#{$alias}-f\<\>"]   { float: none !important; }
 
 
