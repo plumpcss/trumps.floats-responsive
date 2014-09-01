@@ -1,0 +1,61 @@
+/*------------------------------------*\
+	#FLOATS-RESPONSIVE
+\*------------------------------------*/
+
+/**
+ * Responsive float classes based on your responsive settings.
+ */
+
+@if $plump-enable-floats--symbol == true {
+
+	@each $breakpoint in $breakpoints {
+
+		$alias:     nth($breakpoint, 1);
+		$condition: nth($breakpoint, 2);
+
+		// This isn’t ideal, but we definitely don’t want to generate floats
+		// for retina devices. Exclude retina floats manually.
+		@if ($alias != "retina") {
+
+			@include media-query($alias) {
+
+				[class~="#{$plump-namespace}#{$alias}-f\>"]     { float: left !important; }
+				[class~="#{$plump-namespace}#{$alias}-f\<"]     { float: right !important; }
+				[class~="#{$plump-namespace}#{$alias}-f\<\>"]   { float: none !important; }
+
+
+			} // Close media query.
+
+		} // Close retina check.
+
+	} // Close breakpoints loop.
+
+} // Close fractions @if.
+
+
+
+
+@else {
+
+	@each $breakpoint in $breakpoints {
+
+		$alias:     nth($breakpoint, 1);
+		$condition: nth($breakpoint, 2);
+
+		// This isn’t ideal, but we definitely don’t want to generate floats
+		// for retina devices. Exclude retina floats manually.
+		@if ($alias != retina) {
+
+			@include media-query($alias) {
+
+				.#{$plump-namespace}#{$alias}-fl                { float: left !important; }
+				.#{$plump-namespace}#{$alias}-fr                { float: right !important; }
+				.#{$plump-namespace}#{$alias}-fn                { float: none !important; }
+
+			} // Close media query.
+
+		} // Close retina check.
+
+	} // Close breakpoints loop.
+
+} // Close fractions @if.
