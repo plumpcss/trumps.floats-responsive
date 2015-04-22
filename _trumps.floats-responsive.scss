@@ -1,10 +1,15 @@
-/*------------------------------------*\
-	#FLOATS-RESPONSIVE
-\*------------------------------------*/
+///*------------------------------------*\
+//    #FLOATS-RESPONSIVE
+//\*------------------------------------*/
 
-/**
- * Responsive float classes based on your responsive settings.
- */
+// Responsive float classes based on your responsive settings.
+
+// Predefine the variables below in order to alter and enable specific features.
+$plump-enable-floats--symbol: false !default;
+
+
+
+
 
 @if $plump-enable-floats--symbol == true {
 
