@@ -1,11 +1,16 @@
 ///*------------------------------------*\
-//	 #FLOATS-RESPONSIVE
+//    #FLOATS-RESPONSIVE
 //\*------------------------------------*/
 
-//    Responsive float classes based on your responsive settings.
+// Responsive float classes based on your responsive settings.
 
-//    Predefine the variables below in order to alter and enable specific features.
+// Predefine the variables below in order to alter and enable specific features.
 $plump-floats-responsive-namespace: $plump-namespace !default;
+$plump-enable-floats--symbol: false !default;
+
+
+
+
 
 @if $plump-enable-floats--symbol == true {
 
@@ -32,6 +37,7 @@ $plump-floats-responsive-namespace: $plump-namespace !default;
 	} // Close breakpoints loop.
 
 } // Close fractions @if.
+
 
 
 
