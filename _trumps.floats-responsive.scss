@@ -5,6 +5,7 @@
 // Responsive float classes based on your responsive settings.
 
 // Predefine the variables below in order to alter and enable specific features.
+$plump-floats-responsive-namespace: $plump-namespace !default;
 $plump-enable-floats--symbol: false !default;
 
 
@@ -24,9 +25,9 @@ $plump-enable-floats--symbol: false !default;
 
 			@include media-query($alias) {
 
-				[class~="#{$plump-namespace}#{$alias}-f\<"]     { float: left !important; }
-				[class~="#{$plump-namespace}#{$alias}-f\>"]     { float: right !important; }
-				[class~="#{$plump-namespace}#{$alias}-f\<\>"]   { float: none !important; }
+				[class~="#{$plump-floats-responsive-namespace}u-f\<-#{$alias}"]     { float: left !important; }
+				[class~="#{$plump-floats-responsive-namespace}u-f\>-#{$alias}"]     { float: right !important; }
+				[class~="#{$plump-floats-responsive-namespace}u-f\<\>-#{$alias}"]   { float: none !important; }
 
 
 			} // Close media query.
@@ -36,6 +37,7 @@ $plump-enable-floats--symbol: false !default;
 	} // Close breakpoints loop.
 
 } // Close fractions @if.
+
 
 
 
@@ -53,9 +55,9 @@ $plump-enable-floats--symbol: false !default;
 
 			@include media-query($alias) {
 
-				.#{$plump-namespace}#{$alias}-fl                { float: left !important; }
-				.#{$plump-namespace}#{$alias}-fr                { float: right !important; }
-				.#{$plump-namespace}#{$alias}-fn                { float: none !important; }
+				.#{$plump-floats-responsive-namespace}u-fl-#{$alias}                { float: left !important; }
+				.#{$plump-floats-responsive-namespace}u-fr-#{$alias}                { float: right !important; }
+				.#{$plump-floats-responsive-namespace}u-fn-#{$alias}                { float: none !important; }
 
 			} // Close media query.
 
